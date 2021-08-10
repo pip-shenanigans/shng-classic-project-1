@@ -1,0 +1,8 @@
+
+
+# Tests
+pytest
+pytest-runner
+pytest-cov
+pytest-flakes
+pytest-black

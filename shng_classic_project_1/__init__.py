@@ -6,13 +6,13 @@ VERSION = "0.0.1"
 __all__ = ["Gold", "Bronze"]
 
 
-class MedalsGold:
+class Medals:03Gold:
     pass
 
 
-class MedalsSilver:
+class Medals:03Silver:
     pass
 
 
-class MedalsBronze:
+class Medals:03Bronze:
     pass

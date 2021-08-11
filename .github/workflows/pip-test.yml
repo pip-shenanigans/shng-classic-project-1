@@ -28,7 +28,7 @@ jobs:
           - "true"
         python_project_test_with_pytest:
           - "false"
-          - "true"
+#          - "true"
 
     steps:
 

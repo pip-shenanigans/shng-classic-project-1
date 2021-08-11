@@ -20,8 +20,8 @@ install_requires = [
     "celery < 5",
     "requests",
     "pytz",
-    "git+ssh://git@github.com:pip-shenanigans/shng-classic-library-1.git#egg=shng-classic-library-1",
-    "git+ssh://git@github.com:pip-shenanigans/shng-classic-library-3.git#egg=shng-classic-library-3",
+    "git+ssh://git@github.com/pip-shenanigans/shng-classic-library-1.git#egg=shng-classic-library-1",
+    "git+ssh://git@github.com/pip-shenanigans/shng-classic-library-3.git#egg=shng-classic-library-3",
 ]
 # fmt: on
 

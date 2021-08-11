@@ -11,15 +11,7 @@ pkg = __import__(PACKAGE)
 
 # fmt: off
 install_requires = [
-    "flask == 1.*",
-    "webargs < 5",
-    "sqlalchemy < 1.4",
-    "psycopg2-binary",
-    "marshmallow < 3",
-    "flask_sqlalchemy",
-    "celery < 5",
     "requests",
-    "pytz",
     "git+ssh://git@github.com/pip-shenanigans/shng-classic-library-1.git#egg=shng-classic-library-1",
     "git+ssh://git@github.com/pip-shenanigans/shng-classic-library-3.git#egg=shng-classic-library-3",
 ]

@@ -71,7 +71,7 @@ RUN set -eu -x; \
 ### RUN set -eu -x; \
 ###     useradd -D; \
 ###     useradd --user-group --uid 1001 --create-home tools; \
-###     ls -l /home/tools/;
+###     ls -lh /home/tools/;
 ###
 ### WORKDIR /home/tools/
 ### USER tools
@@ -95,10 +95,10 @@ RUN set -eu -x; \
     useradd -D; \
     useradd --user-group --uid 1000 --create-home app; \
     echo "app ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers; \
-    ls -l /home/app/; \
+    ls -lh /home/app/; \
     mkdir /app/; \
     chown app:app /app; \
-    ls -ld /app/;
+    ls -lhd /app/;
 
 WORKDIR /app
 USER app
@@ -110,6 +110,14 @@ RUN mkdir -p ${PROJECT_CODE_DIRPATH}
 
 # Copy & Install project
 COPY --chown=app:app . ${PROJECT_CODE_DIRPATH}
+
+RUN set -eu -x; \
+    mkdir -p ${HOME}/.ssh; \
+    chmod 0700 ${HOME}/.ssh; \
+    ssh-keyscan github.com > ${HOME}/.ssh/known_hosts; \
+    cp -v ${PROJECT_CODE_DIRPATH}/build/keys/* -t ${HOME}/.ssh/; \
+    chmod -v 600 ${HOME}/.ssh/*; \
+    ls -lh ${HOME}/.ssh/;
 
 RUN bash ${PROJECT_CODE_DIRPATH}/build/project-install.sh
 

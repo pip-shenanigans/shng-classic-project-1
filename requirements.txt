@@ -1,4 +1,8 @@
 
+-e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-1#egg=shng-classic-library-1
+-e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-2#egg=shng-classic-library-2
+ipython
+black
 
 # Tests
 pytest

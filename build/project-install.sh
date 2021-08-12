@@ -23,10 +23,17 @@ ls -lhd ${PROJECT_CODE_DIRPATH}
 
 cd ${PROJECT_CODE_DIRPATH}
 
+set +e
 # Install project requirements
-pip --no-cache-dir install --user -r requirements.txt
+nl requirements.txt
+pip --verbose --no-cache-dir install --user -r requirements.txt
+ls -l /tmp/
+cat /tmp/pip.log
+
+exit 111
 
 # Install project
+nl setup.py
 if [[ "${PYTHON_PROJECT_INSTALL_WITH_PIP}" = "true" ]]
 then
     pip --no-cache-dir install --user -e .

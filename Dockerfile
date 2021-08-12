@@ -4,8 +4,8 @@ ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 ENV PROJECT_NAME shng-classic-project-1
 
-#ARG PYTHON_PIP_VERSION="== 21.2.*"
-ARG PYTHON_PIP_VERSION="< 20.3"
+ARG PYTHON_PIP_VERSION="== 21.2.*"
+#ARG PYTHON_PIP_VERSION="< 20.3"
 ARG PYTHON_SETUPTOOLS_VERSION="< 58"
 ARG PYTHON_PROJECT_INSTALL_WITH_PIP="false"
 ARG PYTHON_PROJECT_TEST_WITH_PYTEST="false"
@@ -115,9 +115,10 @@ RUN set -eu -x; \
     mkdir -p ${HOME}/.ssh; \
     chmod 0700 ${HOME}/.ssh; \
     ssh-keyscan github.com > ${HOME}/.ssh/known_hosts; \
-    cp -v ${PROJECT_CODE_DIRPATH}/build/keys/* -t ${HOME}/.ssh/; \
+    cp -v ${PROJECT_CODE_DIRPATH}/build/ssh/* -t ${HOME}/.ssh/; \
     chmod -v 600 ${HOME}/.ssh/*; \
-    ls -lh ${HOME}/.ssh/;
+    ls -lh ${HOME}/.ssh/; \
+    ssh -v -T git@github.com 2>&1 | grep "You've successfully authenticated";
 
 RUN bash ${PROJECT_CODE_DIRPATH}/build/project-install.sh
 

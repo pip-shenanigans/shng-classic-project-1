@@ -21,6 +21,9 @@ printenv
 pip list --user
 ls -lhd ${PROJECT_CODE_DIRPATH}
 
+cd /app/code/
+git clone git@github.com:pip-shenanigans/shng-classic-lib-1.git
+
 cd ${PROJECT_CODE_DIRPATH}
 
 # Install project requirements

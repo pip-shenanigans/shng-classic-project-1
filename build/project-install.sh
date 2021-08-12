@@ -23,14 +23,10 @@ ls -lhd ${PROJECT_CODE_DIRPATH}
 
 cd ${PROJECT_CODE_DIRPATH}
 
-set +e
 # Install project requirements
 nl requirements.txt
 pip --verbose --no-cache-dir install --user -r requirements.txt
-ls -l /tmp/
-cat /tmp/pip.log
-
-exit 111
+pip list --user;
 
 # Install project
 nl setup.py
@@ -40,5 +36,4 @@ then
 else
     python3 setup.py develop --user
 fi
-
 pip list --user;

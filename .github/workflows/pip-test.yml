@@ -84,7 +84,7 @@ jobs:
         run: docker run -t local/python-pip-test pipdeptree
 
       - name: Run - List Python packages dependencies
-        run: docker run -t local/python-pip-test pipdeptree --exclude pip,pipdeptree,setuptools,wheel,chardet,pytest,pytest-black,pytest-flakes,pytest-cov,pytest-runner
+        run: docker run -t local/python-pip-test pipdeptree --exclude pip,pipdeptree,setuptools,wheel,chardet
 
       - name: Run - Exec project tests
         run: docker run -t local/python-pip-test

@@ -80,5 +80,11 @@ jobs:
       - name: Run - Check Python packages compatibility
         run: docker run -t local/python-pip-test pip check
 
+      - name: Run - List Python packages dependencies
+        run: docker run -t local/python-pip-test pipdeptree
+
+      - name: Run - List Python packages dependencies
+        run: docker run -t local/python-pip-test pipdeptree --exclude pip,pipdeptree,setuptools,wheel
+
       - name: Run - Exec project tests
         run: docker run -t local/python-pip-test

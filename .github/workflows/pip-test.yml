@@ -27,8 +27,8 @@ jobs:
           - "false"
           - "true"
         python_project_test_with_pytest:
-          - "false"
-#          - "true"
+#         - "false"
+           - "true"
 
     steps:
 
@@ -84,7 +84,7 @@ jobs:
         run: docker run -t local/python-pip-test pipdeptree
 
       - name: Run - List Python packages dependencies
-        run: docker run -t local/python-pip-test pipdeptree --exclude pip,pipdeptree,setuptools,wheel
+        run: docker run -t local/python-pip-test pipdeptree --exclude pip,pipdeptree,setuptools,wheel,chardet,pytest,pytest-black,pytest-flakes,pytest-cov,pytest-runner
 
       - name: Run - Exec project tests
         run: docker run -t local/python-pip-test

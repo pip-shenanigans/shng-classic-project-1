@@ -5,7 +5,7 @@ pipdeptree
 
 # Tests
 pytest
-pytest-runner
-pytest-cov
-pytest-flakes
-pytest-black
+### pytest-runner
+### pytest-cov
+### pytest-flakes
+### pytest-black

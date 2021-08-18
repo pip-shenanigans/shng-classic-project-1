@@ -19,6 +19,6 @@ class PackgesVersions(unittest.TestCase):
 
     def test_installed_packages_versions(self):
         assert len(packages_versions) > 0
-        for package_name, package_version in packages_versions:
+        for package_name, package_version in packages_versions.items():
             self._check_package_version(package_name, package_version)
 

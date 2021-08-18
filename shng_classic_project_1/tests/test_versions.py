@@ -3,9 +3,11 @@ import unittest
 
 # fmt: off
 packages_versions = {
-    "shng_classic_library_1": "0.0.1",
+    "shng_classic_library_1": "this-version",
     "shng_classic_library_2": "0.2.0",
     "shng_classic_library_3": "0.0.1",
+    "shng_classic_library_4": "0.3.0",
+    "shng_classic_library_5": "0.2.0",
 }
 # fmt: on
 

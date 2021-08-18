@@ -12,7 +12,9 @@ pkg = __import__(PACKAGE)
 # fmt: off
 install_requires = [
     "shng-classic-library-1",
+    "shng-classic-library-2",
     "shng-classic-library-3",
+    "shng-classic-library-4",
     "requests",
 ]
 # fmt: on

@@ -1,6 +1,8 @@
 
--e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-1@master#egg=shng-classic-library-1
+-e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-1#egg=shng-classic-library-1
+-e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-2@0.2.0#egg=shng-classic-library-2
 -e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-3@master#egg=shng-classic-library-3
+-e git+ssh://git@github.com/pip-shenanigans/shng-classic-library-4@develop#egg=shng-classic-library-4
 pipdeptree
 
 # Tests
